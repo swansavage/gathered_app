@@ -57,8 +57,14 @@ app.put('/vendors/:id', (req,res)=>{
   });
 });
 
+// vendor destroy route
+app.delete('/vendors/:id', (req,res)=>{
+  Vendor.findByIdAndRemove(req.params.id, (err, foundVendor)=> {
+    res.redirect('/vendors');
+  });
+});
 
-// new vendor show route
+// vendor show route
 app.get('/vendors/:id', (req,res)=> {
     Vendor.findById(req.params.id, (err,foundVendor)=> {
       res.render('vendors/show.ejs', {

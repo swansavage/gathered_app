@@ -7,6 +7,9 @@
   <body>
     <h1>vendor show page</h1>
     <a href="/vendors/<%=vendor.id%>/edit">Edit Vendor</a>
+    <form action="/vendors/<%=vendor.id%>?_method=DELETE" method="POST">
+      <input type="submit" value="Delete Vendor">
+    </form>
 
     <div class="vendor-card">
       <h4><%=vendor.category%></h4>
