@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <h1>Create New Vendor</h1>
+        <form action="/vendors" method="POST">
+          <label for="name">Name</label><br>
+          <input type="text" name="name"><br>
+          <label for="category">Category</label><br>
+          <select name="category">
+              <option value="farm">Farm</option>
+              <option value="restaurant">Restaurant</option>
+              <option value="store">Store</option>
+              <option value="farmers-market">Farmers' Market</option>
+              <option value="chef-cater-del">Chefs, Caterers & Meal Delivery</option>
+          </select><br>
+
+          <label for="about">About</label><br>
+          <textarea name="about" rows="8"></textarea><br>
+
+
+          <h4>Contact Info</h4>
+          <label for="contact.email">Email</label><br>
+          <input type="email" name="contact.email"><br>
+          <label for="contact.facebook">Facebook URL</label><br>
+          <input type="text" name="contact.facebook"><br>
+          <label for="contact.twitter">Twitter URL</label><br>
+          <input type="text" name="contact.twitter"><br>
+          <label for="contact.website">Website URL</label><br>
+          <input type="text" name="contact.website">
+
+          <input type="submit" value="Submit Listing">
+
+
+        </form>
+
+
+  </body>
+</html>
