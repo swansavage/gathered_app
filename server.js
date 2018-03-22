@@ -41,10 +41,19 @@ app.post('/vendors', (req,res)=> {
   });
 });
 
+// vendor edit route
+app.get('/vendors/:id/edit', (req,res)=> {
+  Vendor.findById(req.params.id, (err,foundVendor)=>{
+    res.render('vendors/edit.ejs', {
+      vendor: foundVendor
+    });
+  });
+});
+
 
 // new vendor show route
 app.get('/vendors/:id', (req,res)=> {
-    Vendor.findById(req.params.id, (err,foundVendor)=>{
+    Vendor.findById(req.params.id, (err,foundVendor)=> {
       res.render('vendors/show.ejs', {
         vendor: foundVendor
       });
