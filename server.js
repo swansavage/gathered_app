@@ -20,7 +20,7 @@ app.use(express.json());
 
 
 
-//  index route
+//  vendor index route
 app.get('/vendors', (req, res)=>{
   Vendor.find({}, (err, allVendors)=>{
     res.render('vendors/vendors.ejs', {
@@ -34,7 +34,7 @@ app.get('/vendors/new', (req,res)=> {
   res.render('vendors/new.ejs');
 });
 
-// vendor post route
+// vendor create route
 app.post('/vendors', (req,res)=> {
   Vendor.create(req.body, ()=>{
   res.redirect('/vendors');
@@ -47,6 +47,13 @@ app.get('/vendors/:id/edit', (req,res)=> {
     res.render('vendors/edit.ejs', {
       vendor: foundVendor
     });
+  });
+});
+
+// vendor update route
+app.put('/vendors/:id', (req,res)=>{
+  Vendor.findByIdAndUpdate(req.params.id, req.body, {new:true}, (err,foundVendor)=>{
+    res.redirect('/vendors/' + req.params.id);
   });
 });
 

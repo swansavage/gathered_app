@@ -8,7 +8,7 @@
     <h1>Edit Vendor</h1>
         <form action="/vendors/<%=vendor.id%>?_method=PUT" method="POST">
           <label for="name">Name</label><br>
-          <input type="text" name="name" placeholder="<%=vendor.name%>"><br>
+          <input type="text" name="name" value="<%=vendor.name%>"><br>
           <label for="category">Category</label><br>
           <select name="category">
               <option value="<%=vendor.category%>" selected="selected"><%=vendor.category%></option>
@@ -25,13 +25,13 @@
 
           <h4>Contact Info</h4>
           <label for="contact.email">Email</label><br>
-          <input type="email" name="contact.email" placeholder="<%=vendor.contact.email%>"><br>
+          <input type="email" name="contact.email" value="<%=vendor.contact.email%>"><br>
           <label for="contact.facebook">Facebook URL</label><br>
-          <input type="text" name="contact.facebook" placeholder="<%=vendor.contact.facebook%>"><br>
+          <input type="text" name="contact.facebook" value="<%=vendor.contact.facebook%>"><br>
           <label for="contact.twitter">Twitter URL</label><br>
-          <input type="text" name="contact.twitter" placeholder="<%=vendor.contact.twitter%>"><br>
+          <input type="text" name="contact.twitter" value="<%=vendor.contact.twitter%>"><br>
           <label for="contact.website">Website URL</label><br>
-          <input type="text" name="contact.website" placeholder="<%=vendor.contact.website%>">>
+          <input type="text" name="contact.website" value="<%=vendor.contact.website%>"><br>
 
           <input type="submit" value="Submit Listing">
 
