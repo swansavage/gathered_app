@@ -18,60 +18,9 @@ app.use(express.json());
 
 
 
+const vendorsController = require('./controllers/vendors.js');
+app.use('/vendors', vendorsController);
 
-
-//  vendor index route
-app.get('/vendors', (req, res)=>{
-  Vendor.find({}, (err, allVendors)=>{
-    res.render('vendors/vendors.ejs', {
-      vendors: allVendors
-    });
-  });
-});
-
-// vendor new route (form)
-app.get('/vendors/new', (req,res)=> {
-  res.render('vendors/new.ejs');
-});
-
-// vendor create route
-app.post('/vendors', (req,res)=> {
-  Vendor.create(req.body, ()=>{
-  res.redirect('/vendors');
-  });
-});
-
-// vendor edit route
-app.get('/vendors/:id/edit', (req,res)=> {
-  Vendor.findById(req.params.id, (err,foundVendor)=>{
-    res.render('vendors/edit.ejs', {
-      vendor: foundVendor
-    });
-  });
-});
-
-// vendor update route
-app.put('/vendors/:id', (req,res)=>{
-  Vendor.findByIdAndUpdate(req.params.id, req.body, {new:true}, (err,foundVendor)=>{
-    res.redirect('/vendors/' + req.params.id);
-  });
-});
-
-// vendor destroy route
-app.delete('/vendors/:id', (req,res)=>{
-  Vendor.findByIdAndRemove(req.params.id, (err, foundVendor)=> {
-    res.redirect('/vendors');
-  });
-});
-
-// vendor show route
-app.get('/vendors/:id', (req,res)=> {
-    Vendor.findById(req.params.id, (err,foundVendor)=> {
-      res.render('vendors/show.ejs', {
-        vendor: foundVendor
-      });
-    });
-});
 
 
 
