@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+
+    <% if(user.img) { %>
+        <img src="<%=user.img%>">
+    <% } %>
+
+    <h2><%=user.firstName%> <%=user.lastName%></h2>
+    <p class="username"><%=user.username%></p>
+
+    <p class="info"><%=user.city%>, <%=user.state%></p>
+
+
+    <div class="liked-container">
+    <% if (user.liked.length > 0) { %>
+        <% for (let i = 0; i < user.liked.length; i++) { %>
+          <a class="<%=user.liked[i].category%>" href="/vendors/<%=user.liked[i]%>"><%=user.liked[i].name%></a>
+        <% } %>
+    <% } %>
+    </div>
+  </body>
+</html>

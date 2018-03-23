@@ -44,7 +44,7 @@ router.get('/:id/edit', (req,res)=> {
 // user update route
 router.put('/:id', (req,res)=>{
   User.findByIdAndUpdate(req.params.id, req.body, {new:true}, (err,foundUser)=>{
-    res.redirect('/' + req.params.id);
+    res.redirect('/users/' + req.params.id);
   });
 });
 

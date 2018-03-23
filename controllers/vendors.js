@@ -38,7 +38,7 @@ router.get('/:id/edit', (req,res)=> {
 // vendor update route
 router.put('/:id', (req,res)=>{
   Vendor.findByIdAndUpdate(req.params.id, req.body, {new:true}, (err,foundVendor)=>{
-    res.redirect('/' + req.params.id);
+    res.redirect('/vendors/' + req.params.id);
   });
 });
 

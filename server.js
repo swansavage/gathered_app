@@ -15,8 +15,8 @@ app.use(methodOverride('_method'));
 // body parser middleware
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
-
-
+// static middleware
+app.use(express.static('public'));
 //=====CONTROLLERS=======
 
 // vendors controller
