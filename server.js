@@ -9,7 +9,7 @@ const port = process.env.PORT || 3000;
 const Vendor = require('./models/vendors/vendors.js');
 
 
-// MIDDLEWARE
+// =====MIDDLEWARE========
 // method methodOverride
 app.use(methodOverride('_method'));
 // body parser middleware
@@ -17,13 +17,31 @@ app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
 
 
+//=====CONTROLLERS=======
 
+// vendors controller
 const vendorsController = require('./controllers/vendors.js');
 app.use('/vendors', vendorsController);
 
 
 
 
+//=====ROUTES===========
+//index route
+app.get('/', (req,res) => {
+  res.render('index.ejs');
+});
+
+// seed route
+const seed = require('./models/seed.js')
+app.get('/seedVendors', (req, res)=> {
+
+  Vendor.create(seed, (err, createdVendors)=>{
+    console.log(seed);
+    console.log(createdVendors);
+    res.redirect('/');
+  });
+});
 
 
 

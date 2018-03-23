@@ -10,8 +10,13 @@ const vendorSchema = new Schema({
     website: String
   },
   category: String,
-  about: String
-  // location : { type: Number, required: true} // [Long, Lat]
+  about: String,
+  location : {
+    address: String,
+    city: String,
+    state: String,
+    zip: Number
+  }
 });
 
 
