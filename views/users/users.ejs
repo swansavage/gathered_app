@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <h1> User Login</h1>
+
+      <div class="login-container">
+        <h4>Already part of the Gathered community?</h4>
+        <a id="login-link" href="/sessions/new">Log In</a>
+        <h4> or </h4>
+        <a id="signup-link" href="/user/new">Sign Up</a>
+      </div>
+
+
+      <% for (let i = 0; i < users.length; i++) { %>
+          <a href="/users/<%=users[i].id%>"><h4><%=users[i].firstName%> <%=users[i].lastName%></h4>
+            <a href="/users/<%=users[i].id%>/edit">EDIT</a>
+      <% } %>
+  </body>
+</html>

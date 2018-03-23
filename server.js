@@ -23,8 +23,9 @@ app.use(express.json());
 const vendorsController = require('./controllers/vendors.js');
 app.use('/vendors', vendorsController);
 
-
-
+// users controller
+const usersController = require('./controllers/users.js');
+app.use('/users', usersController);
 
 //=====ROUTES===========
 //index route
@@ -35,11 +36,8 @@ app.get('/', (req,res) => {
 // seed route
 const seed = require('./models/seed.js')
 app.get('/seedVendors', (req, res)=> {
-
   Vendor.create(seed, (err, createdVendors)=>{
-    console.log(seed);
-    console.log(createdVendors);
-    res.redirect('/');
+    res.redirect('/vendors');
   });
 });
 
