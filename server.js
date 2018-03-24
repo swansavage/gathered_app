@@ -17,6 +17,13 @@ app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
 // static middleware
 app.use(express.static('public'));
+// session middleware
+app.use(session({
+  secret:'feedmeseymour',
+  resave:false,
+  saveUninitialized: false
+}));
+
 //=====CONTROLLERS=======
 
 // vendors controller
@@ -26,6 +33,11 @@ app.use('/vendors', vendorsController);
 // users controller
 const usersController = require('./controllers/users.js');
 app.use('/users', usersController);
+
+// sessions controller
+const sessionsController = require('./controllers/sessions.js')
+app.use('/sessions', sessionsController);
+
 
 //=====ROUTES===========
 //index route
