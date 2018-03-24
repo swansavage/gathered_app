@@ -7,7 +7,7 @@ const bcrypt = require('bcrypt');
 const port = process.env.PORT || 3000;
 
 const Vendor = require('./models/vendors/vendors.js');
-
+const User  = require('./models/users/users.js');
 
 // =====MIDDLEWARE========
 // method methodOverride
@@ -42,8 +42,9 @@ app.use('/sessions', sessionsController);
 //=====ROUTES===========
 //index route
 app.get('/', (req,res) => {
-  res.render('index.ejs');
-  currentUser: req.session.currentuser
+  res.render('index.ejs', {
+    currentUser: req.session.currentuser
+  });
 });
 
 // seed route

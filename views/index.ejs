@@ -6,7 +6,20 @@
   <body>
     <header>
       <div class="hero-image">
+
+        <% if(currentUser) { %>
+            <form action="/sessions?_method=DELETE" method="POST">
+              <!-- <button class="log-nav" type="submit"><i class="fas fa-sign-out-alt"></i> Log Out</button> -->
+              <input type="submit" value="Log Out">
+            </form>
+              <a class="sign-nav" href="/users/"><i class="fas fa-user-circle"></i>View Profile</a>
+
+      <%  } else { %>
           <a class="log-nav" href="/users"><i class="fas fa-sign-in-alt"></i> Login</a>
+          <a class="sign-nav" href="/users/new"><i class="fas fa-user-plus"></i> Sign up</a>
+      <%  } %>
+
+
         <div class="hero-text">
           <div class="container">
             <h1 class="display-3">Gathered.</h1>
@@ -16,25 +29,13 @@
       </div> <!--end hero-image -->
     </header> <!-- end header -->
 
-
-    <div class="custom-nav">
-      <div class="nav-left">
-        <a class="title" href="/">Gathered.</a>
-      </div>
-      <div class="nav-right container">
-        <a href="#">Farms</a>
-        <a href="#">Restaurants</a>
-        <a href="#">Stores</a>
-        <a href="#">Caterers & Meal Delivery</a>
-        <a href="#">Farmers' Markets</a>
-      </div>
-    </div>
+    <!-- NAVBAR -->
+    <% include ./partials/navbar.ejs %>
+    <!-- end NAVBAR -->
 
 
-
-
-
-
+    <!-- BOOTSTRAP SCRIPTS -->
     <% include ./partials/bootscript.ejs %>
+    <!-- end BOOTSTRAP SCRIPTS -->
   </body>
 </html>

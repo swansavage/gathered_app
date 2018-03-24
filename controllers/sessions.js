@@ -35,6 +35,7 @@ router.post('/', (req,res) => {
 
 // session destroy route
 router.delete('/', (req,res)=>{
+  console.log('deleted');
   req.session.destroy( ()=>{
     res.redirect('/')
   });
