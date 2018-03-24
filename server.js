@@ -43,6 +43,7 @@ app.use('/sessions', sessionsController);
 //index route
 app.get('/', (req,res) => {
   res.render('index.ejs');
+  currentUser: req.session.currentuser
 });
 
 // seed route

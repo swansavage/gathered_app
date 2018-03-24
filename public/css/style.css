@@ -1,0 +1,27 @@
+@font-face {
+  font-family: 'VulfMono';
+  src: url('../assets/fonts/VulfMono-Regular.ttf');
+
+}
+
+.hero-image {
+  background-image: url('../assets/images/garden-carrots_4460x4460.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  height: 500px;
+}
+
+.hero-text {
+
+  text-align: right;
+  position: absolute;
+  color: white;
+  top: 80%;
+  left: 40%;
+  transform: translate(-50%, -50%);
+}
+h1 {
+
+}

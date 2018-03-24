@@ -1,9 +1,15 @@
+//===================
+// VENDORS CONTROLLER
+//===================
+
+
+// =====Dependencies=====
 const express = require('express');
 const router  = express.Router();
 const Vendor   = require('../models/vendors/vendors.js');
 
 
-
+// =====Routes=====
 
 //  vendor index route
 router.get('/', (req, res)=>{
