@@ -2,19 +2,36 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
+    <% include ../partials/head.ejs %>
     <title></title>
   </head>
   <body>
-  
-    <a href="/vendors/new">New Vendor</a>
+    <div id="top"></div>
 
-    <h2>Vendors</h2>
+
+    <!-- NAVBAR -->
+    <% include ../partials/navbar.ejs %>
+    <!-- end NAVBAR -->
+
+  <div class="container">
+      <a class="new-btn" href="/vendors/new"><i class="fas fa-plus-circle"></i>New Vendor</a>
+
+    <h2 class="main-h2">Vendors</h2>
+      <div class="cards-container">
     <% for (let i = 0; i < vendors.length; i++) { %>
-      <a href="/vendors/<%=vendors[i].id%>"<div class="vendor-card">
-        <h4><%=vendors[i].category%></h4>
-        <h3><%=vendors[i].name%></h3>
-        <p><%=vendors[i].about%></p>
-      </div></a>
+      <a href="/vendors/<%=vendors[i].id%>"><div class="vendor-card <%=vendors[i].category%>">
+        <div class="vendor-card-header">
+          <p id="<%=vendors[i].category%>"><%=vendors[i].category%></p>
+          <h4 class="vendor-name"><%=vendors[i].name%></h4>
+          <p class="vendor-loc"><%=vendors[i].location.city%>, <%=vendors[i].location.state%></p>
+        </div> <!-- end vendor-card-header -->
+        <hr>
+        <p class="vendor-about"><%=vendors[i].about%></h4>
+        <div class="read-more"></div>
+      </div></a> <!-- end vendor-card -->
     <% } %>
+  </div> <!-- end cards container -->
+    <a href="#top"><h3>Back to Top</h3></a>
+  </div> <!-- end container -->
   </body>
 </html>

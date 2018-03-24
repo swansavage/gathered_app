@@ -12,17 +12,18 @@ const User  = require('./models/users/users.js');
 // =====MIDDLEWARE========
 // method methodOverride
 app.use(methodOverride('_method'));
-// body parser middleware
-app.use(express.urlencoded({ extended: false }));
-app.use(express.json());
-// static middleware
-app.use(express.static('public'));
 // session middleware
 app.use(session({
   secret:'feedmeseymour',
   resave:false,
   saveUninitialized: false
 }));
+// body parser middleware
+app.use(express.urlencoded({ extended: false }));
+app.use(express.json());
+// static middleware
+app.use(express.static('public'));
+
 
 //=====CONTROLLERS=======
 
@@ -42,10 +43,14 @@ app.use('/sessions', sessionsController);
 //=====ROUTES===========
 //index route
 app.get('/', (req,res) => {
-  res.render('index.ejs', {
-    currentUser: req.session.currentuser
+    Vendor.find({}, (err, allVendors)=>{
+    res.render('index.ejs', {
+      currentUser: req.session.currentuser,
+      vendors: allVendors
+    });
   });
 });
+
 
 // seed route
 const seed = require('./models/seed.js')

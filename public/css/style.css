@@ -4,6 +4,17 @@
 
 }
 
+* {
+  box-sizing: border-box;
+
+}
+
+body {
+  
+}
+a:hover {
+  text-decoration: none;
+}
 .hero-image {
   background-image: url('../assets/images/garden-carrots_4460x4460.jpg');
   background-position: center;
@@ -113,4 +124,115 @@ h1 {
 
 .title:hover {
   text-decoration: none;
+}
+
+.main-h2 {
+  clear: both;
+  font-size: 60px;
+  font-family: 'Raleway';
+  color: rgb(163, 163, 163);
+  margin: 5% auto;
+  text-align: center;
+  width: 100%;
+
+}
+
+.cards-container {
+  width: 80%;
+  margin: 0 auto;
+}
+.vendor-card {
+  width: 47%;
+  float: left;
+  height: 300px;
+  position: relative;
+  overflow: hidden;
+  margin: 10px 10px;
+  padding: 10px;
+  background: rgb(240, 240, 240);
+  box-shadow: 1px 1px 10px rgb(187, 187, 187);
+  border-top: 3px solid rgba(44, 107, 5, 0.7);
+  border-radius: 5px;
+}
+
+.vendor-card .read-more {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  margin: 0;
+  color: rgba(245, 127, 61, 0.9);
+  height: 10%;
+  padding: 5px 0 0 0;
+  background-image: linear-gradient(to bottom, transparent, white);
+}
+
+.Restaurant:hover {
+  border-top: 3px solid rgb(10, 214, 238);
+    cursor: pointer;
+
+}
+
+.Farm:hover {
+  border-top: 3px solid rgb(224, 131, 21);
+  cursor: pointer;
+
+}
+
+.Farmers:hover {
+  border-top: 3px solid rgb(86, 60, 111);
+    cursor: pointer;
+}
+
+.Store:hover {
+  border-top: 3px solid rgb(224, 216, 21);
+  cursor: pointer;
+}
+.vendor-card .vendor-name {
+  display: inline-block;
+  cursor: pointer;
+}
+
+
+.cards-container a {
+  color: black;
+}
+
+.cards-container h4, .cards-container p {
+  font-family: 'Raleway', sans-serif;
+}
+
+a h3 {
+  clear: both;
+  text-align: center;
+  padding-top: 30px;
+  margin-bottom: 50px;
+  font-family: 'Raleway', sans-serif;
+  color: rgb(163, 163, 163)
+}
+
+a h3:hover {
+  color: rgb(0, 0, 0);
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.new-btn {
+  margin-top: 5%;
+  background-color: white;
+  color: rgba(44, 107, 5, 0.7);
+  padding: 10px 20px;
+  clear: both;
+  float: right;
+  border: 2px solid rgba(44, 107, 5, 0.7);
+  border-radius: 5px;
+  font-family: 'Raleway', sans-serif;
+  font-size: 20px;
+}
+
+.new-btn:hover {
+  color: white;
+  background-color: rgba(44, 107, 5, 0.7);
+  border: 2px solid white;
 }

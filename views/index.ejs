@@ -8,11 +8,11 @@
       <div class="hero-image">
 
         <% if(currentUser) { %>
-            <form action="/sessions?_method=DELETE" method="POST">
+            <form action="/sessions/destroy-route?_method=DELETE" method="POST">
               <!-- <button class="log-nav" type="submit"><i class="fas fa-sign-out-alt"></i> Log Out</button> -->
               <input type="submit" value="Log Out">
             </form>
-              <a class="sign-nav" href="/users/"><i class="fas fa-user-circle"></i>View Profile</a>
+              <a class="sign-nav" href="/users/#"><i class="fas fa-user-circle"></i>View Profile</a>
 
       <%  } else { %>
           <a class="log-nav" href="/users"><i class="fas fa-sign-in-alt"></i> Login</a>
@@ -33,7 +33,26 @@
     <% include ./partials/navbar.ejs %>
     <!-- end NAVBAR -->
 
+  <div class="container">
 
+
+    <h2 class="main-h2">Local Vendors</h2>
+      <div class="cards-container">
+    <% for (let i = 0; i < 4; i++) { %>
+      <a href="/vendors/<%=vendors[i].id%>"><div class="vendor-card <%=vendors[i].category%>">
+        <div class="vendor-card-header">
+          <p id="<%=vendors[i].category%>"><%=vendors[i].category%></p>
+          <h4 class="vendor-name"><%=vendors[i].name%></h4>
+          <p class="vendor-loc"><%=vendors[i].location.city%>, <%=vendors[i].location.state%></p>
+        </div> <!-- end vendor-card-header -->
+        <hr>
+        <p class="vendor-about"><%=vendors[i].about%></h4>
+        <div class="read-more"></div>
+      </div></a> <!-- end vendor-card -->
+    <% } %>
+  </div> <!-- end cards container -->
+    <a href="/vendors"><h3>Browse all vendors</h3></a>
+  </div> <!-- end container -->
     <!-- BOOTSTRAP SCRIPTS -->
     <% include ./partials/bootscript.ejs %>
     <!-- end BOOTSTRAP SCRIPTS -->
