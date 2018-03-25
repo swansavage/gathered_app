@@ -1,0 +1,78 @@
+body {
+  background:rgb(210, 210, 210)
+}
+
+
+.login-container {
+  width: 50%;
+  height: 400px;
+  background: white;
+  margin: 35% auto 0;
+  text-align: center;
+  font-family: 'Raleway', sans-serif;
+  border-top: 10px solid rgba(44, 107, 5, 0.7);
+  border-radius: 5px;
+}
+
+#login-link, #signup-link {
+  background-color: rgba(44, 107, 5, 0.7);
+  padding: 10px 20px;
+  color: white;
+  border-radius: 5px;
+  margin-top: 50px;
+  border: 2px solid white;
+}
+
+#signup-link {
+  color: rgba(44, 107, 5, 0.7);
+  background-color: white;
+  border: 1px solid rgba(44, 107, 5, 0.7);
+}
+
+#signup-link:hover {
+  border: 2px solid rgba(44, 107, 5, 0.7);
+  text-decoration: none;
+
+}
+#login-link:hover {
+  border: 2px solid rgba(44, 107, 5, 0.7);
+  text-decoration: none;
+}
+
+.login-container h4 {
+  margin: 50px;
+}
+
+.login-container h3 {
+  font-family: 'Bowlby One SC', cursive;
+  color: rgb(163, 163, 163);
+  margin-top: 50px;
+  font-size: 50px;
+}
+
+form label {
+  color: rgba(44, 107, 5, 0.7);
+  font-size: 18px;
+  margin-top: 10px;
+}
+
+form input {
+  border-radius: 5px;
+  border: 1px solid rgba(44, 107, 5, 0.7);
+}
+
+.input-btn {
+  margin-top: 20px;
+  background-color: rgba(44, 107, 5, 0.7);
+  color: white;
+  padding: 5px 20px;
+  border: 2px solid white;
+  font-family: 'Raleway', sans-serif;
+  border-radius: 5px;
+
+}
+
+.input-btn:hover {
+  border: 2px solid rgba(44, 107, 5, 0.7);
+  cursor: pointer;
+}

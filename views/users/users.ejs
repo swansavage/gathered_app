@@ -2,22 +2,24 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
+    <% include ../partials/head.ejs %>
+    <link rel="stylesheet" href="css/login.css">
     <title></title>
   </head>
   <body>
-    <h1> User Login</h1>
+
+    <div class="container">
+
 
       <div class="login-container">
         <h4>Already part of the Gathered community?</h4>
-        <a id="login-link" href="/sessions/new">Log In</a>
+        <a id="login-link" href="/sessions/new"><i class="fas fa-sign-in-alt"></i> Login</a>
         <h4> or </h4>
-        <a id="signup-link" href="/users/new">Sign Up</a>
+        <a id="signup-link" href="/users/new"><i class="fas fa-user-plus"></i> Sign Up</a>
       </div>
 
 
-      <% for (let i = 0; i < users.length; i++) { %>
-          <a href="/users/<%=users[i].id%>"><h4><%=users[i].firstName%> <%=users[i].lastName%></h4>
-            <a href="/users/<%=users[i].id%>/edit">EDIT</a>
-      <% } %>
+
+      </div>
   </body>
 </html>

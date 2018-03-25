@@ -2,16 +2,19 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
+    <% include ../partials/head.ejs %>
+    <link rel="stylesheet" href="../css/login.css">
     <title></title>
   </head>
   <body>
     <div class="login-container">
+        <h3>Gathered.</h3>
       <form action="/sessions" method="POST">
           <label for="username">Username</label><br>
-          <input type="text" name="username" placeholder="username"><br>
+          <input type="text" name="username"><br>
           <label for="password">Password</label><br>
           <input type="password" name="password"><br>
-          <input type="submit" value="Log In">
+      <button type="submit" class="input-btn"><i class="fas fa-sign-in-alt"></i> Log In</button>
     </div>
   </body>
 </html>
