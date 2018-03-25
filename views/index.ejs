@@ -2,23 +2,13 @@
 <html lang="en" dir="ltr">
   <head>
     <% include ./partials/head.ejs %>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
   </head>
   <body>
     <header>
       <div class="hero-image">
 
-        <% if(currentUser) { %>
-            <form action="/sessions/destroy-route?_method=DELETE" method="POST">
-              <!-- <button class="log-nav" type="submit"><i class="fas fa-sign-out-alt"></i> Log Out</button> -->
-              <input type="submit" value="Log Out">
-            </form>
-              <a class="sign-nav" href="/users/#"><i class="fas fa-user-circle"></i>View Profile</a>
-
-      <%  } else { %>
-          <a class="log-nav" href="/users"><i class="fas fa-sign-in-alt"></i> Login</a>
-          <a class="sign-nav" href="/users/new"><i class="fas fa-user-plus"></i> Sign up</a>
-      <%  } %>
-
+      <%include ./partials/user-buttons.ejs %>
 
         <div class="hero-text">
           <div class="container">

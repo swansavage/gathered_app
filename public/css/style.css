@@ -10,12 +10,12 @@
 }
 
 body {
-  
+
 }
 a:hover {
   text-decoration: none;
 }
-.hero-image {
+.hero-image, .hero-image-new {
   background-image: url('../assets/images/garden-carrots_4460x4460.jpg');
   background-position: center;
   background-repeat: no-repeat;
@@ -24,9 +24,17 @@ a:hover {
   height: 500px;
 }
 
-i {
+.hero-image-new {
+  background-image: url('../assets/images/market-peppers_4460x4460.jpg');
+}
+
+.fa-sign-out-alt, .fa-user-circle, .fa-sign-in-alt, .fa-user-plus {
   margin-right: 5px;
   font-size: 18px;
+}
+
+.new-btn .fa-plus-circle {
+  margin-right: 5px;
 }
 .log-nav, .sign-nav {
   float: right;
@@ -235,4 +243,35 @@ a h3:hover {
   color: white;
   background-color: rgba(44, 107, 5, 0.7);
   border: 2px solid white;
+}
+
+.container .form-container {
+  width: 70%;
+  margin: 50px auto;
+  background: rgba(228, 228, 228, 0.7);
+  padding: 5% 10%;
+  border-radius: 5px;
+  box-shadow: 2px 2px 10px rgb(187, 187, 187);
+  font-family: 'Raleway', sans-serif;
+  border-top: 3px solid rgba(44, 107, 5, 0.7);
+}
+
+.new-vendor-header {
+  margin: 50px 0;
+  color: rgb(163, 163, 163);
+}
+
+.submit-btn {
+  background-color: rgba(44, 107, 5, 0.7);
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  border: 2px solid white;
+  font-size: 20px;
+}
+
+
+.submit-btn:hover {
+  border: 2px solid rgba(44, 107, 5, 0.7);
+  cursor: pointer;
 }

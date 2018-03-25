@@ -22,7 +22,9 @@ router.get('/', (req, res)=>{
 
 // vendor new route (form)
 router.get('/new', (req,res)=> {
-  res.render('vendors/new.ejs');
+  res.render('vendors/new.ejs', {
+    currentUser: req.session.currentuser
+  });
 });
 
 // vendor create route

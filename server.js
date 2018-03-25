@@ -44,6 +44,9 @@ app.use('/sessions', sessionsController);
 //index route
 app.get('/', (req,res) => {
     Vendor.find({}, (err, allVendors)=>{
+      if(req.session.currentuser) {
+      console.log(req.session.currentuser._id);
+    }
     res.render('index.ejs', {
       currentUser: req.session.currentuser,
       vendors: allVendors
@@ -51,6 +54,9 @@ app.get('/', (req,res) => {
   });
 });
 
+app.get('/auth-test', (req,res)=> {
+  res.send(req.session);
+});
 
 // seed route
 const seed = require('./models/seed.js')

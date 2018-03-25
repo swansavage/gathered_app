@@ -34,7 +34,7 @@ router.post('/', (req,res) => {
 
 
 // session destroy route
-router.delete('/destroy-route', ()=>{
+router.delete('/destroy-route', (req,res)=>{
   req.session.destroy( (err)=>{
       if(err){
         console.log('oops!');
