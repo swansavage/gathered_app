@@ -7,6 +7,7 @@
       facebook: '#',
       twitter: '#'
     }
+  }
   //   category: 'Restaurant',
   //   about: 'Donec id elit non mi porta gravida at eget metus. Donec id elit non mi porta gravida at eget metus. Maecenas faucibus mollis interdum. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Nullam quis risus eget urna mollis ornare vel eu leo. Nullam quis risus eget urna mollis ornare vel eu leo. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Nullam quis risus eget urna mollis ornare vel eu leo. Donec id elit non mi porta gravida at eget metus.',
   //   location : {
