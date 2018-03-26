@@ -345,3 +345,21 @@ a h3:hover {
   color: black;
   display: inline-block;
 }
+
+.user-container {
+  clear: both;
+  height: 500px;
+  text-align: center;
+  margin-top: 200px;
+  font-family: 'Raleway', sans-serif;
+}
+
+.user-container img {
+  height: 300px;
+  width: 300px;
+  border-radius: 100%;
+}
+
+.user-container h2 {
+  margin-top: 20px;
+}
