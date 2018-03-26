@@ -53,7 +53,7 @@ router.put('/:id', (req,res)=>{
 // vendor destroy route
 router.delete('/:id', (req,res)=>{
   Vendor.findByIdAndRemove(req.params.id, (err, foundVendor)=> {
-    res.redirect('/');
+    res.redirect('/vendors');
   });
 });
 
