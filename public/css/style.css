@@ -279,3 +279,69 @@ a h3:hover {
   border: 2px solid rgba(44, 107, 5, 0.7);
   cursor: pointer;
 }
+
+.btn-container {
+  margin-top: 5%;
+
+}
+
+.edit-btn, .delete-btn {
+  display: inline-block;
+  float: right;
+  margin: 20px 10px;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-family: 'Raleway', sans-serif;
+}
+
+.edit-btn {
+  color: rgba(44, 107, 5, 0.7);
+  background-color: white;
+  border: 2px solid rgba(44, 107, 5, 0.7);
+}
+
+.edit-btn:hover {
+  text-align: none;
+  color: rgba(44, 107, 5, 0.7);
+  background-color: white;
+  border: 2px solid rgb(187, 187, 187);
+}
+
+.delete-btn {
+  color: white;
+  background-color: rgba(44, 107, 5, 0.7);
+  border: 2px solid white;
+  margin-bottom: 100px;
+}
+
+.delete-btn:hover {
+  cursor: pointer;
+  border: 2px solid rgba(44, 107, 5, 0.7);
+}
+.vendor-container {
+  clear: both;
+  width: 75%;
+  font-family: 'Raleway', sans-serif;
+  border: 2px solid rgb(187, 187, 187);
+  padding: 10%;
+  border-top: 10px solid rgba(44, 107, 5, 0.7);
+  border-radius: 5px;
+  box-shadow: 2px 2px 10px rgb(171, 171, 171);
+  margin: 50px auto 0;
+}
+
+.vendor-container ul {
+  list-style: none;
+
+  padding: 0
+}
+
+.vendor-container li {
+  display: inline-block;
+  margin: 0 10px;
+}
+.vendor-container a {
+  font-size: 20px;
+  color: black;
+  display: inline-block;
+}

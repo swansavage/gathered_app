@@ -2,25 +2,42 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
+        <% include ../partials/head.ejs %>
+        <link rel="stylesheet" href="../css/style.css">
     <title></title>
   </head>
   <body>
-    <h1>vendor show page</h1>
-    <a href="/vendors/<%=vendor.id%>/edit">Edit Vendor</a>
-    <form action="/vendors/<%=vendor.id%>?_method=DELETE" method="POST">
-      <input type="submit" value="Delete Vendor">
-    </form>
+    <%include ../partials/navbar.ejs %>
 
-    <div class="vendor-card">
+    <div class="container">
+
+    <div class="btn-container">
+    <a class= "edit-btn" href="/vendors/<%=vendor.id%>/edit"><i class="far fa-edit"></i> Edit Vendor</a>
+    <form action="/vendors/<%=vendor.id%>?_method=DELETE" method="POST">
+      <button class="delete-btn" type="submit"><i class="fas fa-trash-alt"></i> Delete Vendor</button>
+    </form>
+    </div>
+
+
+    <div class="vendor-container">
+
+
       <h4><%=vendor.category%></h4>
+      <p><%=vendor.location.address%></p>
+      <p><%=vendor.location.city%>, <%=vendor.location.state%> <%=vendor.location.zip%></p>
       <h3><%=vendor.name%></h3>
       <p><%=vendor.about%></p>
+
+
+
       <ul>
-        <li><a href="#"><%=vendor.contact.email%></a></li>
-        <li><a href="#"><%=vendor.contact.facebook%></a></li>
-        <li><a href="#"><%=vendor.contact.twitter%></a></li>
-        <li><a href="#"><%=vendor.contact.website%></a></li>
+        <li><a href="<%=vendor.contact.email%>"><i class="fas fa-envelope"></i></a></li>
+        <li><a href="<%=vendor.contact.facebook%>"><i class="fab fa-facebook-f"></i></a></li>
+        <li><a href="<%=vendor.contact.twitter%>"><i class="fab fa-twitter"></i></a></li>
+        <li><a href="<%=vendor.contact.website%>"><i class="fas fa-globe"></i></a></li>
       </ul>
+    </div>
+      <a href="/vendors"><h3>Back to Vendors<h3></a>
     </div>
   </body>
 </html>

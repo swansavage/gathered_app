@@ -2,12 +2,13 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
+    <% include ../partials/head.ejs %>
     <title></title>
   </head>
   <body>
 
     <% if(user.img) { %>
-        <img src="<%=user.img%>">
+        <img src="../<%=user.img%>">
     <% } %>
 
     <h2><%=user.firstName%> <%=user.lastName%></h2>
