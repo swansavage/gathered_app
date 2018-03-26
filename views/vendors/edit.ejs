@@ -1,44 +1,131 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
+
     <meta charset="utf-8">
+    <% include ../partials/head.ejs %>
+    <link rel="stylesheet" type="text/css" href="/css/style.css">
     <title></title>
   </head>
   <body>
-    <h1>Edit Vendor</h1>
+
+    <% include ../partials/navbar.ejs %>
+    <div class="container">
+    <h2 class="new-vendor-header">Edit Vendor</h2>
+      <div class="form-container">
         <form action="/vendors/<%=vendor.id%>?_method=PUT" method="POST">
-          <label for="name">Name</label><br>
-          <input type="text" name="name" value="<%=vendor.name%>"><br>
-          <label for="category">Category</label><br>
-          <select name="category">
-              <option value="<%=vendor.category%>" selected="selected"><%=vendor.category%></option>
-              <option value="farm">Farm</option>
-              <option value="restaurant">Restaurant</option>
-              <option value="store">Store</option>
-              <option value="farmers-market">Farmers' Market</option>
-              <option value="caterer">Caterers & Meal Delivery</option>
-          </select><br>
+          <div class="form-group">
+            <label for="name">Name</label><br>
+            <input class="form-control" type="text" name="name" value="<%=vendor.name%>"><br>
+          </div>
+          <div class="form-group">
+            <label for="category">Category</label><br>
+            <select class="form-control" name="category">
+                <option value="Farm">Farm</option>
+                <option value="Restaurant">Restaurant</option>
+                <option value="Store">Store</option>
+                <option value="Farmers' Market">Farmers' Market</option>
+                <option value="Caterer & Meal Deliver">Caterers & Meal Delivery</option>
+            </select><br>
+          </div>
+          <div class="form-group">
+            <label for="about">About</label><br>
+            <textarea class="form-control" name="about" rows="8"><%=vendor.about%></textarea><br>
+          </div>
 
-          <label for="about">About</label><br>
-          <textarea name="about" rows="8"><%=vendor.about%></textarea><br>
+          <div class="form-group">
+            <label for="name">Address</label><br>
+            <input class="form-control" type="text" name="location.address" value="<%=vendor.location.address%>"><br>
+          </div>
 
+          <div class="form-group">
+            <label for="name">City</label><br>
+            <input class="form-control" type="text" name="location.city" value="<%=vendor.location.city%>"><br>
+          </div>
 
+          <div class="form-group">
+            <label for="state">State</label><br>
+            <select class="form-control" name="state">
+                <option value="AL">Alabama</option>
+                <option value="AK">Alaska</option>
+                <option value="AZ">Arizona</option>
+                <option value="AR">Arkansas</option>
+                <option value="CA">California</option>
+                <option value="CO">Colorado</option>
+                <option value="CT">Connecticut</option>
+                <option value="DE">Delaware</option>
+                <option value="DC">District Of Columbia</option>
+                <option value="FL">Florida</option>
+                <option value="GA">Georgia</option>
+                <option value="HI">Hawaii</option>
+                <option value="ID">Idaho</option>
+                <option value="IL">Illinois</option>
+                <option value="IN">Indiana</option>
+                <option value="IA">Iowa</option>
+                <option value="KS">Kansas</option>
+                <option value="KY">Kentucky</option>
+                <option value="LA">Louisiana</option>
+                <option value="ME">Maine</option>
+                <option value="MD">Maryland</option>
+                <option value="MA">Massachusetts</option>
+                <option value="MI">Michigan</option>
+                <option value="MN">Minnesota</option>
+                <option value="MS">Mississippi</option>
+                <option value="MO">Missouri</option>
+                <option value="MT">Montana</option>
+                <option value="NE">Nebraska</option>
+                <option value="NV">Nevada</option>
+                <option value="NH">New Hampshire</option>
+                <option value="NJ">New Jersey</option>
+                <option value="NM">New Mexico</option>
+                <option value="NY">New York</option>
+                <option value="NC">North Carolina</option>
+                <option value="ND">North Dakota</option>
+                <option value="OH">Ohio</option>
+                <option value="OK">Oklahoma</option>
+                <option value="OR">Oregon</option>
+                <option value="PA">Pennsylvania</option>
+                <option value="RI">Rhode Island</option>
+                <option value="SC">South Carolina</option>
+                <option value="SD">South Dakota</option>
+                <option value="TN">Tennessee</option>
+                <option value="TX">Texas</option>
+                <option value="UT">Utah</option>
+                <option value="VT">Vermont</option>
+                <option value="VA">Virginia</option>
+                <option value="WA">Washington</option>
+                <option value="WV">West Virginia</option>
+                <option value="WI">Wisconsin</option>
+                <option value="WY">Wyoming</option>
+            </select><br>
+
+          <div class="form-group">
+            <label for="name">Zip Code</label><br>
+            <input class="form-control" type="text" name="location.zip" value="<%=vendor.location.zip%>"><br>
+          </div>
           <h4>Contact Info</h4>
-          <label for="contact.email">Email</label><br>
-          <input type="email" name="contact.email" value="<%=vendor.contact.email%>"><br>
-          <label for="contact.facebook">Facebook URL</label><br>
-          <input type="text" name="contact.facebook" value="<%=vendor.contact.facebook%>"><br>
-          <label for="contact.twitter">Twitter URL</label><br>
-          <input type="text" name="contact.twitter" value="<%=vendor.contact.twitter%>"><br>
-          <label for="contact.website">Website URL</label><br>
-          <input type="text" name="contact.website" value="<%=vendor.contact.website%>"><br>
-
-          <input type="submit" value="Submit Listing">
+          <div class="form-group">
+            <label for="contact.email">Email</label><br>
+            <input class="form-control" type="email" name="contact.email" value="<%=vendor.contact.email%>"><br>
+          </div>
+          <div class="form-group">
+            <label for="contact.facebook">Facebook URL</label><br>
+            <input class="form-control" type="text" name="contact.facebook" value="<%=vendor.contact.facebook%>"><br>
+          </div>
+          <div class="form-group">
+            <label for="contact.twitter">Twitter URL</label><br>
+            <input class="form-control" type="text" name="contact.twitter" value="<%=vendor.contact.twitter%>"><br>
+          </div>
+          <div class="form-group">
+            <label for="contact.website">Website URL</label><br>
+            <input class="form-control" type="text" name="contact.website" value="<%=vendor.contact.website%>"><br>
+          </div>
+          <input class="submit-btn" type="submit" value="Submit">
 
 
         </form>
-
-
+      </div> <!-- end form-container -->
+      </div> <!---end container -->
 
   </body>
 </html>
