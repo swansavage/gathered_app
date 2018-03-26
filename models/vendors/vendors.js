@@ -15,7 +15,7 @@ const vendorSchema = new Schema({
     address: String,
     city: String,
     state: String,
-    zip: Number
+    zip: String
   }
 });
 
