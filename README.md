@@ -1,4 +1,5 @@
 # Gathered.
+LINK: (https://gathered-app.herokuapp.com/)
 
 Summary: Gathered is a community for connecting with restaurants, farms, markets and other sources of local, sustainable food. The application currently allows users to create a listing for a vendor, and to join the community by becoming a member. In the future, I would like to add more features, such as a social media aspect where users can 'like' different vendors, and comment on the separate vendor pages. I would also like to include geo-location via Google Maps, so users can search near them for local vendors.
 
