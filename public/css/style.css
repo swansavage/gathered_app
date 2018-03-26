@@ -15,7 +15,7 @@ body {
 a:hover {
   text-decoration: none;
 }
-.hero-image, .hero-image-new {
+.hero-image, .hero-image-new, .hero-image-new-user {
   background-image: url('../assets/images/garden-carrots_4460x4460.jpg');
   background-position: center;
   background-repeat: no-repeat;
@@ -26,6 +26,10 @@ a:hover {
 
 .hero-image-new {
   background-image: url('../assets/images/market-peppers_4460x4460.jpg');
+}
+
+.hero-image-new-user {
+  background-image: url('../assets/images/brussel-sprouts-pile_4460x4460.jpg');
 }
 
 .fa-sign-out-alt, .fa-user-circle, .fa-sign-in-alt, .fa-user-plus {

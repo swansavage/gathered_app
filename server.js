@@ -44,9 +44,6 @@ app.use('/sessions', sessionsController);
 //index route
 app.get('/', (req,res) => {
     Vendor.find({}, (err, allVendors)=>{
-      if(req.session.currentuser) {
-      console.log(req.session.currentuser._id);
-    }
     res.render('index.ejs', {
       currentUser: req.session.currentuser,
       vendors: allVendors
